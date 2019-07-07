@@ -1,0 +1,21 @@
+{
+  "name": "md2ppt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitee.com:fwxy/md2ppt.git",
+  "author": "fw6 <lyman.von9506@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck index.mdx",
+    "build": "mdx-deck build index.mdx",
+    "help": "mdx-decck"
+  },
+  "devDependencies": {
+    "mdx-deck": "^2.4.0"
+  },
+  "dependencies": {
+    "prism-react-renderer": "^0.1.6",
+    "recharts": "^1.6.2",
+    "styled-components": "^4.3.2"
+  }
+}

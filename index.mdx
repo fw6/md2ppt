@@ -1,0 +1,195 @@
+import { Head, Notes } from 'mdx-deck'
+import { Appear, MdxImage } from '@mdx-deck/components'
+import highlight from '@mdx-deck/themes/syntax-highlighter'
+import future from '@mdx-deck/themes/future'
+// import { yellow as mdxTheme } from '@mdx-deck/themes'
+import {
+  Split,
+  Invert,
+  SplitRight,
+  Horizontal,
+  FullScreenCode
+} from '@mdx-deck/layouts'
+
+import colors from 'colors'
+import provider from 'components/provider'
+import Header from 'components/header'
+import Image from 'components/image'
+import StackOverflowChart from 'components/stack-overflow-chart'
+
+export const theme = {
+  ...highlight,
+  ...future,
+  ...provider,
+  // ...mdxTheme,
+  css: {
+    padding: '0 15%'
+  },
+  font: 'Nunito, sans-serif',
+  googleFont: 'https://fonts.googleapis.com/css?family=Nunito:300,300i,700',
+  colors: {
+    text: colors.lightOrange,
+    link: colors.lightOrange,
+    code: colors.black,
+    background: colors.black
+  },
+  code: {},
+  Slide: {
+    // background:
+    //   'linear-gradient(180deg, #f2ac39, #d73141) no-repeat center center',
+    // backgroundSize: 'cover'
+  },
+  pre: {
+    fontSize: `28px`,
+    lineHeight: `42px`,
+    color: `#fff !important`
+  },
+  heading: {
+    position: `relative`,
+    zIndex: `1000`,
+    textTransform: `none`
+  },
+  metadata: {
+    author: `fw6`,
+    twitter: `@fw6`,
+    hashtag: `#JAMstackParis`,
+    date: `May 28, 2019`,
+    repository: `https://github.com/developermode/mdx-talk`
+  }
+}
+
+<Head>
+  <title>转正汇报</title>
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
+</Head>
+
+## 转正汇报
+
+👨‍💻 针对入职两个月以来在工作上的成果、成长、不足以及对未来工作的计划进行阐述
+
+<br />
+
+June 28, 2019<br/>
+
+##### 汇报人：冯伟
+
+---
+
+<ul style={{ padding: '20px', textAlign: 'left' }}>
+  <li>个人工作成果总结</li>
+  <Appear>
+    <li>工作上的个人成长</li>
+    <li>目前存在的不足</li>
+    <li>规划展望</li>
+  </Appear>
+</ul>
+
+---
+
+<Header>目录</Header>
+
+<p style={{textAlign: 'left'}}>个人工作成果总结</p>
+
+<Appear>
+
+<p style={{textAlign: 'left'}}>工作上的个人成长</p>
+
+<p style={{textAlign: 'left'}}>目前存在的不足</p>
+
+<p style={{textAlign: 'left'}}>规划展望</p>
+
+</Appear>
+
+---
+
+<Header>1. 个人工作成果总结</Header>
+
+---
+
+- 封装组件
+
+- 完善国际化
+
+- 优化代码
+
+---
+
+<Header>对当前项目的一点思考 🤔</Header>
+
+---
+
+1. 业务逻辑复杂，入手时间长
+2. 状态分散，数据维护困难
+3. 代码多处复用
+4. 代码风格不统一
+
+---
+
+集中处理异步请求？
+
+---
+
+```js
+{
+  actions: {
+    someOtherAction ({dispatch}) {
+      dispatch('someAction')
+    }
+  },
+  modules: {
+    foo: {
+      namespaced: true,
+
+      actions: {
+        someAction: {
+          root: true,
+          handler (namespacedContext, payload) { ... } // -> 'someAction'
+        }
+      }
+    }
+  }
+}
+```
+
+---
+
+```js
+computed: {
+  ...mapState({
+    a: state => state.some.nested.module.a,
+    b: state => state.some.nested.module.b
+  })
+},
+methods: {
+  ...mapActions([
+    'some/nested/module/foo', // -> this['some/nested/module/foo']()
+    'some/nested/module/bar' // -> this['some/nested/module/bar']()
+  ])
+}
+```
+
+---
+
+- yuan 数字转换
+- 文本溢出处理 el-tooltip 的限制（动态提示信息无法合适地换行）
+- 输入框搜索结果 友好提示
+- 表格＋分页（组件整体）
+- Divider(（分隔器，当前 element-ui 版本 不支持）
+- 骨架屏
+- 数字输入框（当前需要每次使用加验证）
+- 空状态组件
+- 状态徽标（文字前 表示状态的小圆点）
+
+🙇‍
+
+---
+
+<Header>学到了什么？</Header>
+
+---
+
+1. 了解公司产品
+2. 编程能力提升
+3. 解决问题能力提升
+4. 熟悉开发调试工具
+5. 沟通能力
