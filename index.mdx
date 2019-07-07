@@ -1,8 +1,8 @@
 import { Head, Notes } from 'mdx-deck'
 import { Appear, MdxImage } from '@mdx-deck/components'
 import highlight from '@mdx-deck/themes/syntax-highlighter'
-import future from '@mdx-deck/themes/future'
-// import { yellow as mdxTheme } from '@mdx-deck/themes'
+import { future  } from '@mdx-deck/themes'
+
 import {
   Split,
   Invert,
@@ -11,57 +11,25 @@ import {
   FullScreenCode
 } from '@mdx-deck/layouts'
 
-import colors from 'colors'
-import provider from 'components/provider'
 import Header from 'components/header'
 import Image from 'components/image'
 import StackOverflowChart from 'components/stack-overflow-chart'
 
-export const theme = {
-  ...highlight,
-  ...future,
-  ...provider,
-  // ...mdxTheme,
-  css: {
-    padding: '0 15%'
+export const themes = [
+  {
+    ...future,
+    css: {
+      padding: '0 15%'
+    }
   },
-  font: 'Nunito, sans-serif',
-  googleFont: 'https://fonts.googleapis.com/css?family=Nunito:300,300i,700',
-  colors: {
-    text: colors.lightOrange,
-    link: colors.lightOrange,
-    code: colors.black,
-    background: colors.black
-  },
-  code: {},
-  Slide: {
-    // background:
-    //   'linear-gradient(180deg, #f2ac39, #d73141) no-repeat center center',
-    // backgroundSize: 'cover'
-  },
-  pre: {
-    fontSize: `28px`,
-    lineHeight: `42px`,
-    color: `#fff !important`
-  },
-  heading: {
-    position: `relative`,
-    zIndex: `1000`,
-    textTransform: `none`
-  },
-  metadata: {
-    author: `fw6`,
-    twitter: `@fw6`,
-    hashtag: `#JAMstackParis`,
-    date: `May 28, 2019`,
-    repository: `https://github.com/developermode/mdx-talk`
-  }
-}
+  highlight
+]
 
 <Head>
   <title>转正汇报</title>
   <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
 </Head>
+
 
 ## 转正汇报
 
@@ -180,7 +148,7 @@ methods: {
 - 空状态组件
 - 状态徽标（文字前 表示状态的小圆点）
 
-🙇‍
+
 
 ---
 
@@ -193,3 +161,39 @@ methods: {
 3. 解决问题能力提升
 4. 熟悉开发调试工具
 5. 沟通能力
+
+---
+
+<Header>存在的不足</Header>
+
+---
+
+对编程中的基础知识和理论基础还不太熟悉，如算法与数据结构、操作系统体系结构、计算机网络、数据库等。
+
+---
+
+对所开发产品的业务流程、业务逻辑等不甚明晰，在一些涉及合同发起、业务分类等业务逻辑复杂的需求，在开发中易遇到困难。
+
+---
+
+沟通中容易紧张，讲话抓不住重点，在表达方式上还有待提升。
+
+---
+
+<Header>规划展望</Header>
+
+---
+
+🤓持续学习
+
+---
+
+🏊‍增强体魄
+
+---
+
+🎻培养爱好
+
+---
+
+谢谢您的观看🙇
