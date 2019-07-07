@@ -8,7 +8,7 @@
   "scripts": {
     "start": "mdx-deck index.mdx",
     "build": "mdx-deck build index.mdx",
-    "help": "mdx-decck"
+    "help": "mdx-deck"
   },
   "devDependencies": {
     "mdx-deck": "^2.4.0"
