@@ -1,35 +1,3 @@
-import { Head, Notes } from 'mdx-deck'
-import { Appear, MdxImage } from '@mdx-deck/components'
-import { future } from '@mdx-deck/themes'
-
-import {
-  Split,
-  Invert,
-  SplitRight,
-  Horizontal,
-  FullScreenCode
-} from '@mdx-deck/layouts'
-
-import Header from 'components/header'
-import Image from 'components/image'
-import StackOverflowChart from 'components/stack-overflow-chart'
-
-export const themes = [
-  {
-    ...future,
-    css: {
-      padding: '0 15%'
-    }
-  }
-]
-
-<!-- ppt README.md --theme=solarized --title=转正汇报 -->
-
-<Head>
-  <title>转正汇报</title>
-  <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
-</Head>
-
 
 ## 转正汇报
 
@@ -37,42 +5,25 @@ export const themes = [
 
 <br />
 
-June 28, 2019<br/>
+<p style="text-align: center;font-size: 12px; line-height: 20px;">June 28, 2019</p>
 
-##### 汇报人：冯伟
+<br/>
 
----
+<p style="text-align: center; line-height: 20px;">汇报人：冯伟</p>
 
-<ul style={{ padding: '20px', textAlign: 'left' }}>
-  <li>个人工作成果总结</li>
-  <Appear>
-    <li>工作上的个人成长</li>
-    <li>目前存在的不足</li>
-    <li>规划展望</li>
-  </Appear>
-</ul>
+##
 
----
+个人工作成果总结
 
-<Header>目录</Header>
+工作上的个人成长
 
-<p style={{textAlign: 'left'}}>个人工作成果总结</p>
+目前存在的不足
 
-<Appear>
+规划展望
 
-<p style={{textAlign: 'left'}}>工作上的个人成长</p>
+## 个人工作成果总结
 
-<p style={{textAlign: 'left'}}>目前存在的不足</p>
-
-<p style={{textAlign: 'left'}}>规划展望</p>
-
-</Appear>
-
----
-
-<Header>1. 个人工作成果总结</Header>
-
----
+###
 
 - 封装组件
 
@@ -80,22 +31,19 @@ June 28, 2019<br/>
 
 - 优化代码
 
----
+### 对当前项目的一点思考 🤔
 
-<Header>对当前项目的一点思考 🤔</Header>
-
----
 
 1. 业务逻辑复杂，入手时间长
 2. 状态分散，数据维护困难
 3. 代码多处复用
 4. 代码风格不统一
 
----
+###
 
 集中处理异步请求？
 
----
+###
 
 ```js
 {
@@ -119,7 +67,7 @@ June 28, 2019<br/>
 }
 ```
 
----
+###
 
 ```js
 computed: {
@@ -136,7 +84,7 @@ methods: {
 }
 ```
 
----
+###
 
 - yuan 数字转换
 - 文本溢出处理 el-tooltip 的限制（动态提示信息无法合适地换行）
@@ -149,12 +97,9 @@ methods: {
 - 状态徽标（文字前 表示状态的小圆点）
 
 
+## 学到了什么？
 
----
-
-<Header>学到了什么？</Header>
-
----
+###
 
 1. 了解公司产品
 2. 编程能力提升
@@ -162,38 +107,34 @@ methods: {
 4. 熟悉开发调试工具
 5. 沟通能力
 
----
 
-<Header>存在的不足</Header>
+## 存在的不足
 
----
+###
 
 对编程中的基础知识和理论基础还不太熟悉，如算法与数据结构、操作系统体系结构、计算机网络、数据库等。
 
----
+###
 
 对所开发产品的业务流程、业务逻辑等不甚明晰，在一些涉及合同发起、业务分类等业务逻辑复杂的需求，在开发中易遇到困难。
 
----
+###
 
 沟通中容易紧张，讲话抓不住重点，在表达方式上还有待提升。
 
----
 
-<Header>规划展望</Header>
+## 规划展望
 
----
+### 🤓持续学习
 
-🤓持续学习
 
----
 
-🏊‍增强体魄
+### 🏊‍增强体魄
 
----
 
-🎻培养爱好
 
----
+### 🎻培养爱好
 
-谢谢您的观看🙇
+
+
+## 谢谢您的观看🙇
